@@ -153,6 +153,7 @@
     dunst # Notification
     clipman # Clipboard manager
     grim # Screenshot
+    python3
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
