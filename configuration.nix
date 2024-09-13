@@ -69,6 +69,13 @@
   services.desktopManager.plasma6.enable = true;
   services.displayManager.sddm.wayland.enable = true;
 
+  # Enable the Gnome Desktop Environment.
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
+
+  # Enable the Hyprland Window Manager.
+  # programs.hyprland.enable = true;
+
   
 
   # Configure keymap in X11
@@ -118,7 +125,6 @@
 
   programs.xwayland.enable = true;
 
-  programs.hyprland.enable = true;
 
   programs.bash.enableCompletion = true;
   programs.bash.interactiveShellInit = ''
