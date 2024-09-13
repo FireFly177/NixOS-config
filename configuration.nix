@@ -11,8 +11,18 @@
     ];
 
   # Bootloader.
+  # systemd
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  # grub
+  # boot.loader.grub.enable = true;
+  # boot.loader.grub.version = 2;
+  # boot.loader.grub.device = "nodev";
+  # boot.loader.grub.useOSProber = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
+
+  # Flake support
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -134,6 +144,8 @@
     vlc
     neofetch
     git
+    kitty
+    alacritty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
