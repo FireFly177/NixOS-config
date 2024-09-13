@@ -1,12 +1,8 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
     ];
 
@@ -60,8 +56,6 @@
     ];
   };
 
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
   # Enable the KDE Plasma 6 Desktop Environment.
@@ -79,8 +73,6 @@
 
   # Enable the Hyprland Window Manager.
   programs.hyprland.enable = true;
-
-  
 
   # Configure keymap in X11
   services.xserver.xkb = {
