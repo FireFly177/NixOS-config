@@ -50,7 +50,8 @@
 
   # Vietnamese keyboard layout
   i18n.inputMethod = {
-    enabled = "ibus";
+    enable = true;
+    type = "ibus";
     ibus.engines = with pkgs.ibus-engines; [
       bamboo
     ];
@@ -122,7 +123,7 @@
   programs.xwayland.enable = true;
 
 
-  programs.bash.enableCompletion = true;
+  programs.bash.completion.enable = true;
   # programs.bash.interactiveShellInit = ''
   #   export GTK_IM_MODULE=ibus
   #   export QT_IM_MODULE=ibus
