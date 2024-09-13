@@ -74,7 +74,7 @@
   # services.xserver.desktopManager.gnome.enable = true;
 
   # Enable the Hyprland Window Manager.
-  # programs.hyprland.enable = true;
+  programs.hyprland.enable = true;
 
   
 
