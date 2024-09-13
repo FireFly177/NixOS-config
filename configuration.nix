@@ -158,6 +158,7 @@
     clipman # Clipboard manager
     grim # Screenshot
     python3
+    home-manager
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
