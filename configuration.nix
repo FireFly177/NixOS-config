@@ -140,12 +140,17 @@
     wget
     lf
     neovim
-    vscode
+    vscode 
     vlc
     neofetch
     git
-    kitty
-    alacritty
+    kitty # Terminal
+    alacritty # Terminal
+    foot # Terminal
+    wofi # Launcher
+    dunst # Notification
+    clipman # Clipboard manager
+    grim # Screenshot
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
