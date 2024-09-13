@@ -24,7 +24,7 @@
   # Flake support
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixoslaptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -64,10 +64,14 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
+  # Enable the KDE Plasma 6 Desktop Environment.
+  # services.displayManager.sddm.enable = true;
+  # services.desktopManager.plasma6.enable = true;
+  # services.displayManager.sddm.wayland.enable = true;
+
+  # Enable the KDE Plasma 5 Desktop Environment.
   services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true;
 
   # Enable the Gnome Desktop Environment.
   # services.xserver.displayManager.gdm.enable = true;
@@ -127,14 +131,16 @@
 
 
   programs.bash.enableCompletion = true;
-  programs.bash.interactiveShellInit = ''
-    export GTK_IM_MODULE=ibus
-    export QT_IM_MODULE=ibus
-    export XMODIFIERS=@im=ibus
-    export QT4_IM_MODULE=ibus
-    export CLUTTER_IM_MODULE=ibus
-    ibus-daemon -drx
-  '';
+  # programs.bash.interactiveShellInit = ''
+  #   export GTK_IM_MODULE=ibus
+  #   export QT_IM_MODULE=ibus
+  #   export XMODIFIERS=@im=ibus
+  #   export QT4_IM_MODULE=ibus
+  #   export CLUTTER_IM_MODULE=ibus
+  #   ibus-daemon -drx
+  #   unset GTK_IM_MODULE
+  #   unset QT_IM_MODULE
+  # '';
 
 
   # Allow unfree packages
