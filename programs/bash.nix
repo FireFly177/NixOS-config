@@ -10,7 +10,7 @@
       
       # Custom Bash functions
       myfunc() {
-        echo "This is a custom function"
+        echo "This is a test function"
       }
     '';
   };
