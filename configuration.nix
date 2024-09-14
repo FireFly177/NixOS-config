@@ -49,24 +49,30 @@
   };
 
   # Vietnamese keyboard layout
+  # i18n.inputMethod = {
+  #   enabled = "ibus";
+  #   ibus.engines = with pkgs.ibus-engines; [
+  #     bamboo
+  #   ];
+  # };
+
   i18n.inputMethod = {
-    enable = true;
-    type = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [
-      bamboo
+    enabled = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-unikey  # For Vietnamese input (Bamboo engine)
     ];
   };
 
   services.xserver.enable = true;
 
   # Enable the KDE Plasma 6 Desktop Environment.
-  # services.displayManager.sddm.enable = true;
-  # services.desktopManager.plasma6.enable = true;
-  # services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
 
   # Enable the KDE Plasma 5 Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  # services.displayManager.sddm.enable = true;
+  # services.xserver.desktopManager.plasma5.enable = true;
 
   # Enable the Gnome Desktop Environment.
   # services.xserver.displayManager.gdm.enable = true;
@@ -152,13 +158,21 @@
     neofetch
     git
     kitty # Terminal
-    alacritty # Terminal
-    foot # Terminal
+    wezterm # Terminal
     wofi # Launcher
     dunst # Notification
     clipman # Clipboard manager
     grim # Screenshot
     python3
+    discord
+
+    # fcitx5
+    # fcitx5-configtool
+    # fcitx5-qt5
+    # fcitx5-gtk
+
+    # kdePackages.fcitx5-with-addons
+    # fcitx5-bamboo
     home-manager
   ];
 
