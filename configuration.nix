@@ -57,7 +57,8 @@
   # };
 
   i18n.inputMethod = {
-    enabled = "fcitx5";
+    enable = true;
+    type = "fcitx5";
     fcitx5.addons = with pkgs; [
       fcitx5-unikey  # For Vietnamese input (Bamboo engine)
     ];
@@ -152,8 +153,9 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     lf
-    neovim
-    vscode 
+    home-manager
+    neovim # Editor
+    vscode # Editor
     vlc
     neofetch
     git
@@ -165,15 +167,9 @@
     grim # Screenshot
     python3
     discord
-
-    # fcitx5
-    # fcitx5-configtool
-    # fcitx5-qt5
-    # fcitx5-gtk
-
-    # kdePackages.fcitx5-with-addons
-    # fcitx5-bamboo
-    home-manager
+    jetbrains-mono # Font
+    nerdfonts # Font
+    noto-fonts-color-emoji # Font
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
