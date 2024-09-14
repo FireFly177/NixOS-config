@@ -14,12 +14,17 @@
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
+  # plain files is through 'home.file'. 
   home.file = {
   };
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+
+  imports = [
+    ./programs/git.nix
+    ./programs/bash.nix
+  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
