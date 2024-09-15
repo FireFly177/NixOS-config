@@ -162,6 +162,7 @@
     jetbrains-mono # Font
     nerdfonts # Font
     noto-fonts-color-emoji # Font
+    synology-drive-client # Sync with NAS
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

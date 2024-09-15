@@ -25,6 +25,7 @@
     ./programs/git.nix
     ./programs/bash.nix
     ./programs/kitty.nix
+    ./programs/plasma.nix
   ];
 
   # Let Home Manager install and manage itself.
