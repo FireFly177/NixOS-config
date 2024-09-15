@@ -1,13 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  programs.plasma = {
-    enable = true;
-    workspace = {
-        cursor = {
-            size = 24;
-        };
-    };
+	programs.plasma = {
+		enable = true;
+		workspace = {
+			cursor = {
+				size = 24;
+		};
+	};
 
-  };
+	};
 }

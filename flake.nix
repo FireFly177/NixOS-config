@@ -7,9 +7,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: 
     let 
       system = "x86_64-linux";
       pkgs = import nixpkgs { 
@@ -34,6 +39,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
           ./home.nix
+          plasma-manager.nixosModules.plasma-manager
         ];
       };
     };

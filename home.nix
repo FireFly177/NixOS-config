@@ -22,6 +22,7 @@
   };
 
   imports = [
+		plasma-manager.homeManagerModules.plasma-manager
     ./programs/git.nix
     ./programs/bash.nix
     ./programs/kitty.nix
