@@ -24,6 +24,7 @@
   imports = [
     ./programs/git.nix
     ./programs/bash.nix
+    ./programs/kitty.nix
   ];
 
   # Let Home Manager install and manage itself.

@@ -18,7 +18,9 @@ This repository contains my NixOS system configuration and home environment conf
 *Make sure you are in the directory before executing command, replace the hardware-configuration.nix with your hardware-configuration.nix in /etc/nixos/*
 1. **System rebuild**
 `nixos-rebuild --flake switch .`
-1. **Home rebuild**
+2. **Home rebuild**
 `home-manager --flake switch .`
-1. **Update dependencies**
+3. **Update dependencies**
 `nix flake update`
+4. **Collect garbage**
+`sudo nix-collect-garbage`

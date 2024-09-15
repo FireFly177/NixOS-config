@@ -160,7 +160,6 @@
     neofetch
     git
     kitty # Terminal
-    wezterm # Terminal
     wofi # Launcher
     dunst # Notification
     clipman # Clipboard manager
