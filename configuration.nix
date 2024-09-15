@@ -49,18 +49,11 @@
   };
 
   # Vietnamese keyboard layout
-  # i18n.inputMethod = {
-  #   enabled = "ibus";
-  #   ibus.engines = with pkgs.ibus-engines; [
-  #     bamboo
-  #   ];
-  # };
-
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
     fcitx5.addons = with pkgs; [
-      fcitx5-unikey  # For Vietnamese input (Bamboo engine)
+      fcitx5-unikey
     ];
   };
 
