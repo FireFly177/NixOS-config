@@ -27,10 +27,10 @@
       window_padding_width 5
       window_border_width 2
 
-      map ctrl+shift+l next_window
-      map ctrl+shift+h prev_window
-      map ctrl+shift+t new_window
-      map ctrl+shift+q close_window
+      map alt+shift+l next_window
+      map alt+shift+h prev_window
+      map alt+shift+t new_window
+      map alt+shift+q close_window
 
       # Start in fullscreen mode
       startup_mode fullscreen

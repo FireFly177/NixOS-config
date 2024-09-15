@@ -7,6 +7,7 @@
     # General Git configuration
     userName = "DuyNguyen";
     userEmail = "huonghaiduynhim@gmail.com";
+    programs.git.extraConfig.init.defaultBranch = "main";
     
     # Additional configurations can be added here
     # extraConfig = ''
