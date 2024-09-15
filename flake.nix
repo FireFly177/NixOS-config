@@ -39,8 +39,9 @@
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
           ./home.nix
-          plasma-manager.nixosModules.plasma-manager
+          inputs.plasma-manager.homeManagerModules.plasma-manager
         ];
+        # home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
       };
     };
   
