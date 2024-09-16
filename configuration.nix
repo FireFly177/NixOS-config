@@ -50,8 +50,9 @@
 
   # Vietnamese keyboard layout
   i18n.inputMethod = {
-    enable = true;
-    type = "fcitx5";
+    # enable = true;
+    # type = "fcitx5";
+    enabled = "fcitx5";
     fcitx5.addons = with pkgs; [
       fcitx5-unikey
     ];
@@ -123,7 +124,7 @@
   programs.xwayland.enable = true;
 
 
-  programs.bash.completion.enable = true;
+  # programs.bash.completion.enable = true;
   # programs.bash.interactiveShellInit = ''
   #   export GTK_IM_MODULE=ibus
   #   export QT_IM_MODULE=ibus

@@ -15,12 +15,24 @@ This repository contains my NixOS system configuration and home environment conf
 ```
 
 ## Usage
+
+add git, vscode and flake to configuration.nix
+`nano /etc/nixos/configuration.nix`
+`nix.settings.experimental-features = [ "nix-command" "flakes" ];`
+rebuild NixOS
+sudo nixos-rebuild switch
+
+clone this repo to home folder, copy hardware-configuration.nix
+`git clone https://github.com/FireFly177/NixOS-config.git`
+`sudo cp /etc/nixos/hardware-configuration.nix /nix-config`
+
+copy hardware-configuration.nix to the 
 *Make sure you are in the directory before executing command, replace the hardware-configuration.nix with your hardware-configuration.nix in /etc/nixos/*
 1. **System rebuild**
-`nixos-rebuild --flake switch .`
-2. **Home rebuild**
+`sudo nixos-rebuild switch --flake  .`
+1. **Home rebuild**
 `home-manager --flake switch .`
-3. **Update dependencies**
+1. **Update dependencies**
 `nix flake update`
-4. **Collect garbage**
+1. **Collect garbage**
 `sudo nix-collect-garbage`
